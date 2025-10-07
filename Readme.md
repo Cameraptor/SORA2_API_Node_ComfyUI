@@ -5,6 +5,10 @@
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)](https://github.com/comfyanonymous/ComfyUI)
 [![Telegram](https://img.shields.io/badge/Telegram-Join%20Community-2CA5E0?logo=telegram)](https://t.me/voogieboogie)
 
+<div align="center">
+  <img src="https://static.tildacdn.com/tild3631-6366-4239-b935-373638363263/photo_2025-10-08_00-.jpg" alt="Sora2 Node Preview" width="800">
+</div>
+
 > **Universal ComfyUI node providing direct access to the full capabilities of the OpenAI Sora API**
 
 Create videos from text, animate your images, and generate sequential remixes all within a single, convenient interface.
