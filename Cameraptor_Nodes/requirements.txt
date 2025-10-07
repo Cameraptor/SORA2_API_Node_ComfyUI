@@ -1,0 +1,6 @@
+requests
+opencv-python
+moviepy
+numpy
+torch
+Pillow
