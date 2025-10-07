@@ -1,1 +1,0 @@
-# SORA2_API_Node_ComfyUI
