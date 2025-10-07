@@ -113,7 +113,7 @@ Go to [platform.openai.com](https://platform.openai.com/) and sign up or log in.
 
 ### Step 2: Verification & Add Credits
 
-1. **Verify your account** (usually requires phone number)
+1. **Verify your account** (usually requires ID)
 2. Navigate to **Settings** → **Billing**
 3. Click **Add payment details** and add your credit card
 4. Click **Add to credit balance** and add funds (minimum $10 recommended)
@@ -271,3 +271,4 @@ MIT License - See LICENSE file for details
 ⭐ Star this repo if you find it useful!
 
 </div>
+
