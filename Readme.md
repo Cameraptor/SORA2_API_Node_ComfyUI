@@ -1,308 +1,233 @@
-\# 🦖 Sora2 Node for ComfyUI by Cameraptor
+# 🦖 Sora2 Node for ComfyUI
 
+[![GitHub](https://img.shields.io/badge/GitHub-Cameraptor-blue?logo=github)](https://github.com/Cameraptor/SORA2_API_Node_ComfyUI)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)](https://github.com/comfyanonymous/ComfyUI)
 
+> **Universal ComfyUI node providing direct access to the full capabilities of the OpenAI Sora API**
 
-This is a universal node for ComfyUI that provides direct access to the full capabilities of the \*\*OpenAI Sora API\*\*. Create videos from text, animate your images, and generate sequential remixes all within a single, convenient interface.
+Create videos from text, animate your images, and generate sequential remixes all within a single, convenient interface.
 
-
-
-Author: \*\*Voogie\*\* | Project: \*\*Cameraptor\*\* | \[cameraptor.com/voogie](https://cameraptor.com/voogie)
-
-
-
-!\[Workflow Example](https://i.imgur.com/your\_image\_link.png) <!-- REPLACE THIS LINK WITH A SCREENSHOT OF YOUR WORKFLOW -->
-
-
+**Author:** Voogie | **Project:** Cameraptor | [cameraptor.com/voogie](https://cameraptor.com/voogie)
 
 ---
 
+## ✨ Key Features
 
-
-\### ✨ Key Features
-
-
-
-\*   \*\*Unified Interface:\*\* A single node for all modes (`Generate` and `Remix`).
-
-\*   \*\*Auto-Remix:\*\* The node automatically uses the ID of the last generated video for remixing. No more cyclical dependencies in your workflow!
-
-\*   \*\*Audio Extraction:\*\* Automatically extracts the audio track for direct use with nodes like `VHS Video Combine` (\*requires `moviepy`\*).
-
-\*   \*\*Smart Resize (Img2Vid):\*\* Automatically resizes your input image to match Sora API's requirements while preserving aspect ratio (using letterboxing/pillarboxing).
-
-\*   \*\*Accurate Cost Estimation:\*\* Calculates the approximate cost for both `Generate` and `Remix` jobs.
-
-\*   \*\*Bulletproof Error Handling:\*\* The node won't crash or break the queue if the OpenAI API returns an error.
-
-
+| Feature | Description |
+|---------|-------------|
+| 🎯 **Unified Interface** | Single node for all modes (Generate and Remix) |
+| 🔄 **Auto-Remix** | Automatically uses the ID of the last generated video - no cyclical dependencies! |
+| 🔊 **Audio Extraction** | Extracts audio track for direct use with nodes like VHS Video Combine |
+| 📐 **Smart Resize** | Auto-resizes input images to match Sora API requirements (preserves aspect ratio) |
+| 💰 **Cost Estimation** | Accurate cost calculation for both Generate and Remix jobs |
+| 🛡️ **Error Handling** | Bulletproof handling - won't crash or break the queue on API errors |
 
 ---
 
+## 🚀 Installation
 
+### Method 1: Via ComfyUI Manager ⭐ (Recommended)
 
-\### 🚀 Installation
+1. Launch ComfyUI and open the **Manager**
+2. Click **Install via Git URL**
+3. Paste the repository URL:
+   ```
+   https://github.com/Cameraptor/SORA2_API_Node_ComfyUI
+   ```
+4. Click **Install** (dependencies will be installed automatically)
+5. **Restart ComfyUI completely**
 
+### Method 2: Manual Installation
 
+1. Navigate to your `ComfyUI/custom_nodes/` directory
 
-Installation is designed to be as simple and automatic as possible.
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/Cameraptor/SORA2_API_Node_ComfyUI
+   ```
 
+3. Enter the directory:
+   ```bash
+   cd SORA2_API_Node_ComfyUI
+   ```
 
+4. Install dependencies using ComfyUI's Python:
+   
+   **Windows:**
+   ```bash
+   ..\..\python_embeded\python.exe -m pip install -r requirements.txt
+   ```
+   
+   **Linux/Mac:**
+   ```bash
+   ../../python/bin/python -m pip install -r requirements.txt
+   ```
 
-\#### Method 1: Via ComfyUI Manager (Recommended)
-
-
-
-1\.  Launch ComfyUI and open the \*\*Manager\*\*.
-
-2\.  Click on the \*\*Install via Git URL\*\* button.
-
-3\.  Paste this repository's URL into the field: `https://github.com/Cameraptor/SORA2\_API\_Node\_ComfyUI`
-
-4\.  Click \*\*Install\*\*. ComfyUI Manager will automatically download the node and install all required dependencies (`opencv-python`, `moviepy`, etc.).
-
-5\.  \*\*Completely restart ComfyUI.\*\*
-
-
-
-\#### Method 2: Manual Installation
-
-
-
-1\.  Navigate to your `ComfyUI/custom\_nodes/` directory.
-
-2\.  Open a terminal (command prompt) in this folder and run the command:
-
-&nbsp;   ```bash
-
-&nbsp;   git clone https://github.com/Cameraptor/SORA2\_API\_Node\_ComfyUI
-
-&nbsp;   ```
-
-3\.  After the download is complete, navigate into the new directory:
-
-&nbsp;   ```bash
-
-&nbsp;   cd SORA2\_API\_Node\_ComfyUI
-
-&nbsp;   ```
-
-4\.  Install the dependencies. \*\*Important:\*\* Use the Python environment embedded with your ComfyUI. For Windows, the command is:
-
-&nbsp;   ```bash
-
-&nbsp;   ..\\..\\python\_embeded\\python.exe -m pip install -r requirements.txt
-
-&nbsp;   ```
-
-5\.  \*\*Completely restart ComfyUI.\*\*
-
-
+5. **Restart ComfyUI completely**
 
 ---
 
+## 🔑 Getting Your OpenAI API Key
 
+> ⚠️ **Important:** Sora is a paid service. You need an OpenAI account with credits and an API key.
 
-\### 🔑 How to Get an OpenAI API Key (Required!)
+### Step 1: Create an Account
 
+Go to [platform.openai.com](https://platform.openai.com/) and sign up or log in.
 
+### Step 2: Verification & Add Credits
 
-Sora is a paid service. To use this node, you need an OpenAI account with a positive credit balance and an API key.
+1. **Verify your account** (usually requires phone number)
+2. Navigate to **Settings** → **Billing**
+3. Click **Add payment details** and add your credit card
+4. Click **Add to credit balance** and add funds (minimum $10 recommended)
 
+> 💡 **Note:** The API operates on a pre-paid basis and won't work without credits.
 
+### Step 3: Create API Key
 
-\#### Step 1: Sign Up on the OpenAI Platform
+1. Navigate to **API Keys** in the left menu
+2. Click **Create new secret key**
+3. Give it a name (e.g., `ComfyUI-Sora`)
+4. Click **Create secret key**
 
+> ⚠️ **Warning:** The key is shown only once! Copy it immediately and store it securely.
 
+### Step 4: Use in ComfyUI
 
-\*   Go to \[platform.openai.com](https://platform.openai.com/).
-
-\*   Sign up for a new account or log in to your existing one.
-
-
-
-\#### Step 2: Verification and Adding Credits (IMPORTANT!)
-
-
-
-\*   \*\*Verification:\*\* OpenAI will require you to verify your account, usually with a phone number. Complete this process.
-
-\*   \*\*Credits:\*\* Unlike ChatGPT, the API operates on a pre-paid basis.
-
-&nbsp;   \*   In the left-hand menu, navigate to \*\*Settings\*\* -> \*\*Billing\*\*.
-
-&nbsp;   \*   Click \*\*Add payment details\*\* and add your credit card.
-
-&nbsp;   \*   After adding a card, click \*\*Add to credit balance\*\* and add funds (e.g., $10). \*The API will not work without credits.\*
-
-
-
-\#### Step 3: Create an API Key
-
-
-
-\*   In the left-hand menu, navigate to \*\*API Keys\*\*.
-
-\*   Click the \*\*Create new secret key\*\* button.
-
-\*   Give the key a name (e.g., `ComfyUI-Sora`).
-
-\*   Click \*\*Create secret key\*\*.
-
-\*   \*\*ATTENTION!\*\* This key will be shown \*\*only once\*\*. Copy it immediately and save it in a secure place. If you close the window, you will never be able to see it again.
-
-
-
-\#### Step 4: Use the Key in ComfyUI
-
-
-
-\*   Paste the copied key into the `openai\_api\_key` field in the `🦖 Sora2` node.
-
-
+Paste your API key into the `openai_api_key` field in the 🦖 Sora2 node.
 
 ---
 
+## 🕹️ Usage Guide
 
+Find the **🦖 Sora2** node in the **🦖Cameraptor** menu. Configure parameters and click **Queue Prompt**.
 
-\### 🕹️ How to Use \& Parameters Explained
-
-
-
-Find the `🦖 Sora2` node in the `🦖Cameraptor` menu. After configuring the parameters, click \*\*"Queue Prompt"\*\* and \*\*watch the console (the black command window) to see the generation progress!\*\*
-
-
+> 💡 **Tip:** Watch the console (command window) to monitor generation progress!
 
 ---
 
+## 📋 Parameters Reference
 
+### Core Parameters
 
-\#### Main Parameters
-
-
-
-\##### `mode`
-
-\*   \*\*`Generate`\*\*: Creates a brand new video from a text prompt or an image.
-
-\*   \*\*`Remix`\*\*: Modifies a previously generated video based on a new prompt.
-
-
-
-\##### `openai\_api\_key`
-
-\*   Your secret API key from the OpenAI Platform. This is required.
-
-
-
-\##### `prompt`
-
-\*   The main text description for your video.
-
-\*   In `Generate` mode, it describes the scene you want to create.
-
-\*   In `Remix` mode, it describes the \*changes\* you want to make to the source video.
-
-\*   For best results, check out the \[Official Sora Prompting Guide](https://cookbook.openai.com/examples/sora/sora2\_prompting\_guide).
-
-
-
-\##### `save\_path`
-
-\*   The directory where the final video file will be saved. Defaults to the ComfyUI `output` folder.
-
-
-
-\##### `filename\_prefix`
-
-\*   The base name for your saved video file. A unique number will be automatically appended to prevent overwriting (e.g., `Sora\_Video\_00001.mp4`).
-
-
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `mode` | Dropdown | **Generate**: Create new video from text/image<br>**Remix**: Modify existing video |
+| `openai_api_key` | String | Your OpenAI API secret key (required) |
+| `prompt` | Text | Video description or modification instructions |
+| `save_path` | String | Output directory (defaults to ComfyUI output folder) |
+| `filename_prefix` | String | Base filename (unique number appended automatically) |
 
 ---
 
-\#### `Generate` Mode Parameters
+### Generate Mode Parameters
 
+*Active only when `mode = Generate`*
 
+| Parameter | Options | Description |
+|-----------|---------|-------------|
+| `profile` | Standard/Pro | Model quality tier (Pro = higher fidelity, higher cost) |
+| `orientation` | Landscape/Portrait | Video aspect ratio |
+| `duration` | Seconds | Video length (longer = more cost) |
+| `image_input` | Socket (Optional) | Connect image for **Image-to-Video** mode<br>Empty = **Text-to-Video** mode |
 
-\*These are only active when `mode` is set to `Generate`.\*
-
-
-
-\##### `profile`
-
-\*   Selects the model and quality tier. "Pro" versions offer higher visual fidelity at a higher cost.
-
-
-
-\##### `orientation`
-
-\*   Sets the aspect ratio of the video (`Landscape` or `Portrait`).
-
-
-
-\##### `duration`
-
-\*   The length of the video in seconds. Longer durations cost more and take more time.
-
-
-
-\##### `image\_input` (Optional Socket)
-
-\*   Connect an image to enable \*\*Image-to-Video\*\* mode. The node will automatically resize the image to fit the target resolution. If nothing is connected, the node runs in \*\*Text-to-Video\*\* mode.
-
-
+> 📐 **Auto-Resize:** Connected images are automatically resized with letterboxing/pillarboxing to match Sora requirements.
 
 ---
 
-\#### `Remix` Mode Parameters
+### Remix Mode Parameters
 
+*Active only when `mode = Remix`*
 
+| Parameter | Description |
+|-----------|-------------|
+| `source_video_id` | **Auto Mode (Recommended):** Leave empty - uses last generated video ID<br>**Manual Mode:** Enter specific `video_...` ID to remix older videos |
 
-\*These are only active when `mode` is set to `Remix`.\*
-
-
-
-\##### `source\_video\_id`
-
-\*   The ID of the video you want to remix (e.g., `video\_...`).
-
-\*   \*\*Automatic Mode (Recommended):\*\* Leave this field \*\*empty\*\*. The node will automatically use the ID of the last video generated in the current session. This is the easiest way to create a sequence of remixes.
-
-\*   \*\*Manual Mode:\*\* Paste a specific `video\_id` here to remix an older video. This will take priority over the automatic mode.
-
-
+> 🔄 **Pro Tip:** Leave `source_video_id` empty for automatic sequential remixing!
 
 ---
 
-\#### General Parameters
+### General Parameters
 
+*Active in both modes*
 
-
-\*These are active in both modes.\*
-
-
-
-\##### `polling\_interval`
-
-\*   How often (in seconds) the node checks with OpenAI to see if the video is ready.
-
-
-
-\##### `max\_polling\_time`
-
-\*   The maximum time (in seconds) the node will wait for a video to be completed. If the generation takes longer than this, the node will time out. Increase this for longer or higher-quality videos.
-
-
-
-\##### `show\_progress`
-
-\*   If enabled, prints the generation progress percentage (`0%... 100%`) in the console.
-
-
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `polling_interval` | 5s | How often to check if video is ready |
+| `max_polling_time` | 600s | Maximum wait time before timeout |
+| `show_progress` | True | Display generation progress (0-100%) in console |
 
 ---
 
+## 📖 Best Practices
 
+### Prompting Tips
 
-Load the `workflow\_example.json` file to see a complete working example!
+For optimal results, check the [Official Sora Prompting Guide](https://cookbook.openai.com/examples/sora/sora2_prompting_guide).
 
+**Generate Mode:**
+- Describe the complete scene you want to create
+- Include details about camera movement, lighting, mood
+
+**Remix Mode:**
+- Describe only the changes you want to make
+- Reference elements from the source video
+
+### Workflow Optimization
+
+1. Use **Auto-Remix** by leaving `source_video_id` empty
+2. Increase `max_polling_time` for longer/higher-quality videos
+3. Enable `show_progress` to monitor generation status
+4. Check console output for detailed information
+
+---
+
+## 📦 Example Workflow
+
+Load `workflow_example.json` to see a complete working setup!
+
+---
+
+## 🛠️ Troubleshooting
+
+### Common Issues
+
+| Issue | Solution |
+|-------|----------|
+| Node not appearing | Restart ComfyUI completely after installation |
+| API Error | Verify API key and check credit balance |
+| Timeout | Increase `max_polling_time` value |
+| Image size error | Node auto-resizes, but check source image isn't corrupted |
+
+---
+
+## 📝 Requirements
+
+- **ComfyUI** (latest version recommended)
+- **Python packages:** opencv-python, moviepy (auto-installed)
+- **OpenAI API key** with credits
+
+---
+
+## 🤝 Support
+
+- **Issues:** [GitHub Issues](https://github.com/Cameraptor/SORA2_API_Node_ComfyUI/issues)
+- **Website:** [cameraptor.com/voogie](https://cameraptor.com/voogie)
+
+---
+
+## 📄 License
+
+MIT License - See LICENSE file for details
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Voogie | Cameraptor**
+
+⭐ Star this repo if you find it useful!
+
+</div>
