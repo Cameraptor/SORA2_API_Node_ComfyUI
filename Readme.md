@@ -3,6 +3,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-Cameraptor-blue?logo=github)](https://github.com/Cameraptor/SORA2_API_Node_ComfyUI)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Custom%20Node-orange)](https://github.com/comfyanonymous/ComfyUI)
+[![Telegram](https://img.shields.io/badge/Telegram-Join%20Community-2CA5E0?logo=telegram)](https://t.me/voogieboogie)
 
 > **Universal ComfyUI node providing direct access to the full capabilities of the OpenAI Sora API**
 
@@ -211,10 +212,11 @@ Load `workflow_example.json` to see a complete working setup!
 
 ---
 
-## 🤝 Support
+## 🤝 Support & Community
 
-- **Issues:** [GitHub Issues](https://github.com/Cameraptor/SORA2_API_Node_ComfyUI/issues)
-- **Website:** [cameraptor.com/voogie](https://cameraptor.com/voogie)
+- **💬 Telegram Community:** [Join @voogieboogie](https://t.me/voogieboogie) - Get help, share workflows, discuss features!
+- **🐛 Issues:** [GitHub Issues](https://github.com/Cameraptor/SORA2_API_Node_ComfyUI/issues)
+- **🌐 Website:** [cameraptor.com/voogie](https://cameraptor.com/voogie)
 
 ---
 
@@ -227,6 +229,8 @@ MIT License - See LICENSE file for details
 <div align="center">
 
 **Made with ❤️ by Voogie | Cameraptor**
+
+[![Telegram](https://img.shields.io/badge/💬_Join_Telegram_Community-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/voogieboogie)
 
 ⭐ Star this repo if you find it useful!
 
