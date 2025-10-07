@@ -9,7 +9,9 @@
   <img src="https://static.tildacdn.com/tild3631-6366-4239-b935-373638363263/photo_2025-10-08_00-.jpg" alt="Sora2 Node Preview" width="100%">
 </div>
 
-> **Universal ComfyUI node providing direct access to the full capabilities of the OpenAI Sora API**
+> **The most convenient and comfortable way to generate with SORA officially in ComfyUI - high quality output without watermarks!**
+
+> Universal ComfyUI node providing direct access to the full capabilities of the OpenAI Sora API
 
 Create videos from text, animate your images, and generate sequential remixes all within a single, convenient interface.
 
@@ -27,6 +29,34 @@ Create videos from text, animate your images, and generate sequential remixes al
 | 📐 **Smart Resize** | Auto-resizes input images to match Sora API requirements (preserves aspect ratio) |
 | 💰 **Cost Estimation** | Accurate cost calculation for both Generate and Remix jobs |
 | 🛡️ **Error Handling** | Bulletproof handling - won't crash or break the queue on API errors |
+
+---
+
+## 📦 Prerequisites
+
+Before installing the Sora2 node, make sure you have:
+
+### 1. ComfyUI (Required)
+
+Any version of ComfyUI will work. Get the latest version here:
+
+🔗 **[Download ComfyUI](https://www.comfy.org/)**
+
+> 💡 **Tip:** You can use the portable version for easy installation without system-wide Python setup.
+
+### 2. ComfyUI Manager (Required)
+
+Essential for easy node installation and management:
+
+🔗 **[ComfyUI Manager](https://github.com/Comfy-Org/ComfyUI-Manager)**
+
+### 3. VHS Video Helper Suite (Recommended)
+
+For optimal workflow and video preview functionality:
+
+🔗 **[VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite)**
+
+> ✅ **Note:** VHS Nodes will be automatically installed through ComfyUI Manager if needed.
 
 ---
 
@@ -210,7 +240,9 @@ Load `workflow_example.json` to see a complete working setup!
 
 ## 📝 Requirements
 
-- **ComfyUI** (latest version recommended)
+- **ComfyUI** - Any version ([Download here](https://www.comfy.org/))
+- **ComfyUI Manager** - For easy node installation ([GitHub](https://github.com/Comfy-Org/ComfyUI-Manager))
+- **VHS VideoHelperSuite** - Recommended for video preview ([GitHub](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite))
 - **Python packages:** opencv-python, moviepy (auto-installed)
 - **OpenAI API key** with credits
 
